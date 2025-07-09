@@ -20,13 +20,13 @@ public class Spawner : MonoBehaviour
     
     [Header("Launch Settings")]
     [Tooltip("Minimum upward launch angle in degrees")]
-    public float minLaunchAngle = 45f;
+    public float minLaunchAngle = 80f;
     
     [Tooltip("Maximum upward launch angle in degrees")]
-    public float maxLaunchAngle = 135f;
+    public float maxLaunchAngle = 100f;
     
     [Tooltip("Launch force applied to fruits")]
-    public float launchForce = 100f;
+    public float launchForce = 50f;
     
     [Tooltip("Random horizontal spread in degrees")]
     public float horizontalSpread = 30f;
@@ -43,16 +43,19 @@ public class Spawner : MonoBehaviour
     // Fruit type enum
     public enum FruitType
     {
-        Watermelon = 0,
-        Apple = 1,
-        Banana = 2,
-        Melon = 3,
-        Orange = 4,
-        Pineapple = 5,
-        Grape = 6,
-        Tomato = 7,
-        Carrot = 8,
-        Coconut = 9
+        Apple = 0,
+        Banana = 1,
+        Cherry = 2,
+        Coconut = 3,
+        Dragonfruit = 4,
+        Grapes = 5,
+        Lemon = 6,
+        Mango = 7,
+        Orange = 8,
+        Peach = 9,
+        Pear = 10,
+        Pineapple = 11,
+        Watermelon = 12
     }
 
     void Start()
@@ -67,21 +70,21 @@ public class Spawner : MonoBehaviour
         {
             if (fruitPrefabs[i] == null)
             {
-                Debug.LogWarning($"Fruit prefab at index {i} ({(FruitType)i}) is not assigned!");
+                //Debug.LogWarning($"Fruit prefab at index {i} ({(FruitType)i}) is not assigned!");
             }
         }
         
         // Check spawn points
         if (spawnPoints.Length < 2)
         {
-            Debug.LogError("Need at least 2 spawn points! Currently have: " + spawnPoints.Length);
+            //Debug.LogError("Need at least 2 spawn points! Currently have: " + spawnPoints.Length);
         }
         
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             if (spawnPoints[i] == null)
             {
-                Debug.LogError($"Spawn point {i} is not assigned!");
+                //Debug.LogError($"Spawn point {i} is not assigned!");
             }
         }
     }
@@ -93,7 +96,7 @@ public class Spawner : MonoBehaviour
             isSpawning = true;
             spawnTimer = 0f;
             spawnCoroutine = StartCoroutine(SpawnCycle());
-            Debug.Log("Fruit spawning started!");
+            //Debug.Log("Fruit spawning started!");
         }
     }
 
@@ -113,7 +116,7 @@ public class Spawner : MonoBehaviour
         
         // Auto-stop when duration is reached
         StopSpawning();
-        Debug.Log("Spawning duration completed!");
+        //Debug.Log("Spawning duration completed!");
     }
 
     void SpawnFruitsForCycle()
@@ -180,12 +183,12 @@ public class Spawner : MonoBehaviour
         rb.angularVelocity = Random.insideUnitSphere * 5f;
         
         // Log spawn info
-        Debug.Log($"Spawned {fruitPrefab.name} at {spawnPoint.name} with angle {Vector3.Angle(Vector3.up, launchDirection)}°");
+        //Debug.Log($"Spawned {fruitPrefab.name} at {spawnPoint.name} with angle {Vector3.Angle(Vector3.up, launchDirection)}°");
     }
 
     Vector3 CalculateLaunchDirection()
     {
-        // Get random angle between min and max (45-135 degrees)
+        // Get random angle between min and max
         float angle = Random.Range(minLaunchAngle, maxLaunchAngle);
         
         // Convert to radians
@@ -279,7 +282,7 @@ public class Spawner : MonoBehaviour
                 StopCoroutine(spawnCoroutine);
                 spawnCoroutine = null;
             }
-            Debug.Log("Fruit spawning stopped!");
+            //Debug.Log("Fruit spawning stopped!");
         }
     }
 }
