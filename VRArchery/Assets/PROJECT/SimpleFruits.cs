@@ -30,7 +30,7 @@ public class SimpleFruits : MonoBehaviour
         }
         
         // Set tag
-        gameObject.tag = "Fruit";
+        //gameObject.tag = "Fruit";
     }
     
     void Update()
