@@ -1340,16 +1340,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitPrefabs:
-  - {fileID: 3934304902998410063, guid: 0131d3bfb0780da44931bf6286d2e074, type: 3}
   - {fileID: 3696603206917833739, guid: f53e60e9550965c4dadb94e24aeb5a9f, type: 3}
   - {fileID: 8900571323045176633, guid: 4bbcc064493d62f49b72e548aa263a24, type: 3}
-  - {fileID: 1887741104816227722, guid: cda824a98bf42994fa89456b1523fa47, type: 3}
+  - {fileID: 7255375976213761986, guid: 8410fcff4448d6f4884c2f82a308133c, type: 3}
   - {fileID: 3304499728516034943, guid: 99fb5d8f87107ed41b389ef86b61d6f5, type: 3}
-  - {fileID: 1159414358214733115, guid: d5893af968bbc4b45afd682e2307a7ca, type: 3}
   - {fileID: 2982400237035449533, guid: e686ef54d792e154aa1ea8f3ff56b6c4, type: 3}
+  - {fileID: 1159414358214733115, guid: d5893af968bbc4b45afd682e2307a7ca, type: 3}
+  - {fileID: 5617625804048151086, guid: 68155d3a417b24248951a6f6093a32f5, type: 3}
   - {fileID: 1246861837033091354, guid: dd2083d5c36f11849abd018ab640ff31, type: 3}
   - {fileID: 8414332128948465158, guid: 1f5ffea65f832f4458462165babe3f92, type: 3}
+  - {fileID: 2495444091418207474, guid: dc02214755e7c3f45ad51d9bd8fe102a, type: 3}
+  - {fileID: 8161893691303284556, guid: 5b3d5020c5317754c895434972235663, type: 3}
   - {fileID: 8784592854444460345, guid: be90e1e0f6e4cea4694b737679562791, type: 3}
+  - {fileID: 3934304902998410063, guid: 0131d3bfb0780da44931bf6286d2e074, type: 3}
   fruitsPerCycle: 3
   spawnCycleDelay: 3
   spawningDuration: 60
