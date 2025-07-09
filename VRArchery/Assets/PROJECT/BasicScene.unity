@@ -1353,11 +1353,11 @@ MonoBehaviour:
   - {fileID: 8161893691303284556, guid: 5b3d5020c5317754c895434972235663, type: 3}
   - {fileID: 8784592854444460345, guid: be90e1e0f6e4cea4694b737679562791, type: 3}
   - {fileID: 3934304902998410063, guid: 0131d3bfb0780da44931bf6286d2e074, type: 3}
-  fruitsPerCycle: 3
+  fruitsPerCycle: 5
   spawnCycleDelay: 3
   spawningDuration: 60
-  minLaunchAngle: 45
-  maxLaunchAngle: 135
+  minLaunchAngle: 75
+  maxLaunchAngle: 125
   launchForce: 10
   horizontalSpread: 30
   spawnPoints:
@@ -1460,7 +1460,7 @@ Transform:
   m_GameObject: {fileID: 937014907}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0.25}
+  m_LocalPosition: {x: 1.5, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1563,7 +1563,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1088524465}
-  - component: {fileID: 1088524464}
   m_Layer: 0
   m_Name: SpawnerLeft
   m_TagString: Untagged
@@ -1571,39 +1570,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1088524464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088524463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1077432660690f74dae6d2893eca3fa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fruitPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fruitsPerCycle: 3
-  spawnCycleDelay: 3
-  spawningDuration: 60
-  minLaunchAngle: 45
-  maxLaunchAngle: 135
-  launchForce: 10
-  horizontalSpread: 30
-  spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &1088524465
 Transform:
   m_ObjectHideFlags: 0
@@ -1613,7 +1579,7 @@ Transform:
   m_GameObject: {fileID: 1088524463}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0.25}
+  m_LocalPosition: {x: -1, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
