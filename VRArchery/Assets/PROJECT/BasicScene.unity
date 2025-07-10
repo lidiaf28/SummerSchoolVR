@@ -2505,12 +2505,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfcf895f65251b4ba7f5d2a885909d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 9001324510369927770, guid: 018132aea27261b42972e07d5843ac74, type: 3}
+  arrowPrefab: {fileID: 8254617207068095934, guid: 9a1c68c11f0ce1d4081a8f7c464b6019, type: 3}
   shootPoint: {fileID: 616831666}
   arrowSpeed: 10
   arrowLifetime: 3
   canShoot: 1
-  shootCooldown: 1
+  shootCooldown: 0.2
   maxArrowsInScene: 10
   mainCamera: {fileID: 776076578}
   audioSource: {fileID: 0}
