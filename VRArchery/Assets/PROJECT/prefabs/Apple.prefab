@@ -94,9 +94,10 @@ GameObject:
   - component: {fileID: 4037241407077359281}
   - component: {fileID: 7335727649204033492}
   - component: {fileID: 7600839905356506024}
+  - component: {fileID: 6538897884239657855}
   m_Layer: 7
   m_Name: Apple
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 3696603206917833739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.01, y: 0.784, z: -7.158}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -133,8 +134,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Apple
   pointValue: 10
+  fruitColor: {r: 1, g: 0, b: 0, a: 1}
   destroyBelowY: -10
   maxLifetime: 20
+  explosionPrefab: {fileID: 0}
+  explosionScale: 1
 --- !u!54 &7600839905356506024
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,6 +166,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &6538897884239657855
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696603206917833739}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.99
+  m_Center: {x: -1.32, y: 2.55, z: -0.73}
 --- !u!1 &3867649401537861015
 GameObject:
   m_ObjectHideFlags: 0

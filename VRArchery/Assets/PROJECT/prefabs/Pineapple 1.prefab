@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e45470d3e2cfbc4db5ea13910705f12, type: 3}
+      propertyPath: m_TagString
+      value: Fruit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -86,6 +90,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e45470d3e2cfbc4db5ea13910705f12, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4119586815632255083}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e45470d3e2cfbc4db5ea13910705f12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 358571563443753360}
   m_SourcePrefab: {fileID: 100100000, guid: 6e45470d3e2cfbc4db5ea13910705f12, type: 3}
 --- !u!1 &8784592854444460345 stripped
 GameObject:
@@ -106,8 +113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Pineapple
   pointValue: 25
+  fruitColor: {r: 0.7311321, g: 0.685754, b: 0.20692419, a: 1}
   destroyBelowY: -10
   maxLifetime: 20
+  explosionPrefab: {fileID: 0}
+  explosionScale: 1
 --- !u!54 &4119586815632255083
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,3 +145,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &358571563443753360
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784592854444460345}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.112573035, y: 0.21000001, z: 0.11040335}
+  m_Center: {x: -0.00021823496, y: 0.104093045, z: 0.00040204823}

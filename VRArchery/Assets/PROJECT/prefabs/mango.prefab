@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: daa3be3ce6b6a3e4c8a604f36e46ce62, type: 3}
+      propertyPath: m_TagString
+      value: Fruit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -86,6 +90,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: daa3be3ce6b6a3e4c8a604f36e46ce62, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2812420819595544255}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: daa3be3ce6b6a3e4c8a604f36e46ce62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005508036167485117}
   m_SourcePrefab: {fileID: 100100000, guid: daa3be3ce6b6a3e4c8a604f36e46ce62, type: 3}
 --- !u!1 &1246861837033091354 stripped
 GameObject:
@@ -106,8 +113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Mango
   pointValue: 10
+  fruitColor: {r: 0.3277826, g: 0.5613208, b: 0.15886438, a: 1}
   destroyBelowY: -10
   maxLifetime: 20
+  explosionPrefab: {fileID: 0}
+  explosionScale: 1
 --- !u!54 &-2812420819595544255
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,3 +145,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &1005508036167485117
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246861837033091354}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.027999997
+  m_Center: {x: -0.00007702224, y: 0.028113976, z: 0.0006691776}

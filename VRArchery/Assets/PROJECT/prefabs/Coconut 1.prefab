@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 237a7075433f5a949aa4a0277e7e55a8, type: 3}
+      propertyPath: m_TagString
+      value: Fruit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -86,6 +90,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 237a7075433f5a949aa4a0277e7e55a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1897445914845754057}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 237a7075433f5a949aa4a0277e7e55a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2259019240989197704}
   m_SourcePrefab: {fileID: 100100000, guid: 237a7075433f5a949aa4a0277e7e55a8, type: 3}
 --- !u!1 &3304499728516034943 stripped
 GameObject:
@@ -106,8 +113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Coconut
   pointValue: 35
+  fruitColor: {r: 0.2924528, g: 0.2201999, b: 0.16140084, a: 1}
   destroyBelowY: -10
   maxLifetime: 20
+  explosionPrefab: {fileID: 0}
+  explosionScale: 1
 --- !u!54 &1897445914845754057
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,3 +145,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &2259019240989197704
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304499728516034943}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.0059838784
+  m_Center: {x: 0.0000017490238, y: -0.0000008493662, z: 0.0000029536895}

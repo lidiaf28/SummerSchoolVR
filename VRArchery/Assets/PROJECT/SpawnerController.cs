@@ -8,31 +8,36 @@ public class SpawnerController : MonoBehaviour
 {
     [Header("Spawner Reference")]
     public Spawner fruitSpawner;
-
-    [Header("UI Elements")]
-    public TextMeshProUGUI timerText;
     public Button startButton;
     public Button stopButton;
+    
+    [Header("Timer UI Reference")]
+    public CountdownTimerUI timerUI;
 
     void Start()
     {
-        // Setup button listeners
         if (startButton != null)
             startButton.onClick.AddListener(OnStartButtonClicked);
 
         if (stopButton != null)
             stopButton.onClick.AddListener(OnStopButtonClicked);
-
-        UpdateUI();
-    }
-    
-    void Update()
-    {
-        // Update timer display
-        if (fruitSpawner != null && fruitSpawner.IsSpawning())
+            
+        if (fruitSpawner != null && timerUI != null)
         {
-            UpdateTimerDisplay();
+            fruitSpawner.onTimerUpdate.AddListener(timerUI.UpdateTimerDisplay);
+            fruitSpawner.onTimerTextUpdate.AddListener(timerUI.UpdateTimerText);
+            fruitSpawner.onTimerComplete.AddListener(timerUI.OnTimerComplete);
+            
+            Debug.Log("Timer UI connected to Spawner events");
         }
+        else
+        {
+            if (fruitSpawner == null)
+                Debug.LogError("FruitSpawner is not assigned in SpawnerController!");
+            if (timerUI == null)
+                Debug.LogError("TimerUI is not assigned in SpawnerController!");
+        }
+        UpdateButtonStates();
     }
     
     void OnStartButtonClicked()
@@ -40,7 +45,7 @@ public class SpawnerController : MonoBehaviour
         if (fruitSpawner != null)
         {
             fruitSpawner.StartSpawning();
-            UpdateUI();
+            UpdateButtonStates();
         }
     }
     
@@ -49,31 +54,31 @@ public class SpawnerController : MonoBehaviour
         if (fruitSpawner != null)
         {
             fruitSpawner.StopSpawning();
-            UpdateUI();
+            UpdateButtonStates();
         }
     }
     
-    void UpdateUI()
+    void UpdateButtonStates()
     {
-        if (fruitSpawner == null) return;
-        
-        bool isSpawning = fruitSpawner.IsSpawning();
-        
-        if (startButton != null)
-            startButton.interactable = !isSpawning;
+        if (fruitSpawner != null)
+        {
+            bool isSpawning = fruitSpawner.IsSpawning;
             
-        if (stopButton != null)
-            stopButton.interactable = isSpawning;
+            if (startButton != null)
+                startButton.interactable = !isSpawning;
+                
+            if (stopButton != null)
+                stopButton.interactable = isSpawning;
+        }
     }
     
-    void UpdateTimerDisplay()
+    void OnDestroy()
     {
-        if (timerText != null)
+        if (fruitSpawner != null && timerUI != null)
         {
-            float remainingTime = fruitSpawner.GetRemainingTime();
-            int minutes = Mathf.FloorToInt(remainingTime / 60);
-            int seconds = Mathf.FloorToInt(remainingTime % 60);
-            timerText.text = $"Time Remaining: {minutes:00}:{seconds:00}";
+            fruitSpawner.onTimerUpdate.RemoveListener(timerUI.UpdateTimerDisplay);
+            fruitSpawner.onTimerTextUpdate.RemoveListener(timerUI.UpdateTimerText);
+            fruitSpawner.onTimerComplete.RemoveListener(timerUI.OnTimerComplete);
         }
     }
 }

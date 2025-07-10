@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73bd2a61fdbad5647a36dd1432ce19b7, type: 3}
+      propertyPath: m_TagString
+      value: Fruit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -86,6 +90,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73bd2a61fdbad5647a36dd1432ce19b7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8017782258503556917}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73bd2a61fdbad5647a36dd1432ce19b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5121508761563569297}
   m_SourcePrefab: {fileID: 100100000, guid: 73bd2a61fdbad5647a36dd1432ce19b7, type: 3}
 --- !u!1 &2982400237035449533 stripped
 GameObject:
@@ -106,8 +113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Dragonfruits
   pointValue: 20
+  fruitColor: {r: 0.5377358, g: 0.09385012, b: 0.31630033, a: 1}
   destroyBelowY: -10
   maxLifetime: 20
+  explosionPrefab: {fileID: 786000124842731316, guid: b7434b37a4b8f32489c67686ac88a460, type: 3}
+  explosionScale: 1
 --- !u!54 &8017782258503556917
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,3 +145,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &5121508761563569297
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982400237035449533}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.050000004
+  m_Center: {x: -0.000013783574, y: 0.04963372, z: 0.000092165545}
